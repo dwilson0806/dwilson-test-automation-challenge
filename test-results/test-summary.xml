@@ -1,0 +1,12 @@
+<testsuites id="" name="" tests="4" failures="0" skipped="0" errors="0" time="26.015349999904632">
+<testsuite name="tests/retail/retail-story.spec.ts" timestamp="1665414810307" hostname="" tests="4" failures="0" skipped="0" time="25.092" errors="0">
+<testcase name="retail story/article tests @retailstory Verify share dropdown contains correct items" classname="[businessinsider-prod-e2e] › tests/retail/retail-story.spec.ts › retail story/article tests @retailstory › Verify share dropdown contains correct items" time="2.406">
+</testcase>
+<testcase name="retail story/article tests @retailstory Verify clicking Twitter in share dropdown successfully redirects to Twitter" classname="[businessinsider-prod-e2e] › tests/retail/retail-story.spec.ts › retail story/article tests @retailstory › Verify clicking Twitter in share dropdown successfully redirects to Twitter" time="13.097">
+</testcase>
+<testcase name="retail story/article tests @retailstory Verify clicking LinkedIn in share dropdown successfully redirects to LinkedIn" classname="[businessinsider-prod-e2e] › tests/retail/retail-story.spec.ts › retail story/article tests @retailstory › Verify clicking LinkedIn in share dropdown successfully redirects to LinkedIn" time="4.138">
+</testcase>
+<testcase name="retail story/article tests @retailstory Verify clicking Flipboard in share dropdown successfully redirects to Flipboard" classname="[businessinsider-prod-e2e] › tests/retail/retail-story.spec.ts › retail story/article tests @retailstory › Verify clicking Flipboard in share dropdown successfully redirects to Flipboard" time="5.451">
+</testcase>
+</testsuite>
+</testsuites>

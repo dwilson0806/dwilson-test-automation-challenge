@@ -3,12 +3,12 @@ import { expect } from "@playwright/test";
 
 test.describe("latest page tests @latest", () => {
 
-    test.beforeEach(async ({ page, _latestPage }) => {
+    test.beforeEach(async ({ page, _cookieComponent }) => {
         await page.goto("/latest", { waitUntil: "load" });
-        await _latestPage.acceptCookies();
+        await _cookieComponent.acceptCookies();
     });
 
-    test("Verify share dropdown contains correct items", async ({ _latestPage }) => {
+    test("Verify latest feed stories return 200 OK", async ({ _latestPage }) => {
 
         const latestStoriesLinks = await _latestPage.getFeedStoryLinks();
 

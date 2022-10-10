@@ -1,11 +1,11 @@
 import { test } from "@fixtures/retail/retail.fixture";
 import { expect } from "@playwright/test";
 
-test.describe("retail story/article tests @retailstory", () => {
+test.describe("retail story/article tests @retail", () => {
 
-    test.beforeEach(async ({ page, _retailStoryPage }) => {
+    test.beforeEach(async ({ page, _cookieComponent }) => {
         await page.goto("/ikea-nyc-store-planning-studio-tour-2019-4", { waitUntil: "load" });
-        await _retailStoryPage.acceptCookies();
+        await _cookieComponent.acceptCookies();
     });
 
     test("Verify share dropdown contains correct items", async ({ _retailStoryPage }) => {

@@ -7,11 +7,13 @@
 
 2. run: npm install
 
-3. run: npm run businessinsider-prod-e2e
+3. run: npm run businessinsider-prod-e2e (this will run both main challenge and bonus)
 
-4. run debug: npm run businessinsider-prod-e2e -- --debug
+4. run retail page test suite: npm run businessinsider-prod-e2e -- --grep=retail (this will run main challenge)
 
-(for simplicity i've included both main task and bonus task under businessinsider-prod-e2e)
+5. run latest page test suite: npm run businessinsider-prod-e2e -- --grep=latest (this will run bonus challenge)
+
+6. run debug: npm run businessinsider-prod-e2e -- --debug
 
 Note, by default i've set chromium (headless: false) mainly to show what tests are doing
 Typically I'd run headless.  This can be set in playwright.config.ts (headless: true)

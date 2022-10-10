@@ -2,9 +2,7 @@ import { Page } from "@playwright/test";
 
 export class LatestPage {
 
-    private cookieIframe = "#sp_message_iframe_364840";
     private latestStories = ".tout-image-link";
-
     private page : Page;
 
     constructor(page: Page) {
@@ -28,7 +26,7 @@ export class LatestPage {
         }//for
 
         return testList;
-    }
+    }//getFeedStoryLinks
 
     /**
      * Function will check status for latestFeedStories
@@ -47,6 +45,8 @@ export class LatestPage {
             }//if
         }//for
 
+        //Added this for some debug / log level info for test
+        //Assertion on main test will ensure pass/fail
         if(failList.length > 0) {
             console.log("Latest stories from feed did not return status code: 200");
             for(let story in failList) {
@@ -55,10 +55,5 @@ export class LatestPage {
         }//if
 
         return failList;
-    }
-
-    public async acceptCookies() : Promise<void> {
-        const acceptCookiesButton = this.page.frameLocator(this.cookieIframe).getByText("I'm OK with that");
-        await acceptCookiesButton.click();
-    }
+    }//verifyFeedStoryLinks
 }

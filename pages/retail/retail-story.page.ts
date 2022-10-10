@@ -4,7 +4,6 @@ export class RetailStoryPage {
 
     private socialShareDropdown = "div.share-icon-dropdown-container";
     private socialShareDropdownExpanded = ".share-icon.share-icon-active";
-    private cookieIframe = "#sp_message_iframe_364840";
     private socialShareItem = "span.dropdown-text";
 
     private page : Page;
@@ -15,7 +14,7 @@ export class RetailStoryPage {
 
     /**
      * Function will expand socialShareDropdown
-     * @returns {Promise<void>}
+     * @returns {Promise<boolean>}
      */
     public async clickSocialShareDropdown() : Promise<boolean> {    
         await this.page.click(this.socialShareDropdown, {force: true});
@@ -27,7 +26,7 @@ export class RetailStoryPage {
     /**
      * Function will find socialshare item from dropdown
      * @param {string} socialShareValue
-     * @returns {Promise<string>}
+     * @returns {Promise<number>}
      */
     public async getSocialShareItem(socialShareValue: string) : Promise<number> {    
         
@@ -55,10 +54,5 @@ export class RetailStoryPage {
         const popupUrl = popup.url();
 
         return popupUrl;
-    }
-
-    public async acceptCookies() : Promise<void> {
-        const acceptCookiesButton = this.page.frameLocator(this.cookieIframe).getByText("I'm OK with that");
-        await acceptCookiesButton.click();
     }
 }
