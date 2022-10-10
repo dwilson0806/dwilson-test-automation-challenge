@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "strict": false,
+        "module": "commonjs",
+        "noEmit": true,
+        "baseUrl": ".",
+        "resolveJsonModule": true,
+        "paths": {
+          "@pageObjects/*": [ "pages/*" ],
+          "@fixtures/*": [ "fixtures/*" ],
+          "@root/*": [ "./*" ]
+        }
+    },
+    "include": ["tests"]
+}
