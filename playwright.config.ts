@@ -6,7 +6,8 @@ const config: PlaywrightTestConfig<TestOptions> = {
     retries: 0,
     workers: 3,
     use: {
-        headless: false
+        headless: false,
+        viewport: { width: 700, height: 800 }
     },
     reporter: [
         ['list'],
@@ -18,6 +19,7 @@ const config: PlaywrightTestConfig<TestOptions> = {
             testDir: "tests",
             use: {
                 baseURL: "https://www.businessinsider.com",
+                cookiesEnabled: false,
             }
         }
     ],

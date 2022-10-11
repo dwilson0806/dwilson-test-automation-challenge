@@ -1,13 +1,16 @@
 import { test as base } from "@playwright/test";
 import { LatestPage } from "@pageObjects/latest/latest.page";
 import { CookieFormComponent } from "@components/cookies/cookieForm.component";
+import { TestOptions } from "@root/test.options";
 
 type RetailNewsFixture = {
     _latestPage: LatestPage;
     _cookieComponent: CookieFormComponent;
 }
 
-export const test = base.extend<RetailNewsFixture>({
+export const test = base.extend<RetailNewsFixture, TestOptions>({
+
+    cookiesEnabled: ["default", { option: true, scope: 'worker'}],
 
     _latestPage: async ({ page }, use) => {
 
@@ -18,9 +21,9 @@ export const test = base.extend<RetailNewsFixture>({
         await use(latestPage);
     },
 
-    _cookieComponent: async ({ page }, use) => {
+    _cookieComponent: async ({ page, cookiesEnabled }, use) => {
 
-        const cookieComponent = new CookieFormComponent(page);
+        const cookieComponent = new CookieFormComponent(page, cookiesEnabled);
 
         await use(cookieComponent);
     }

@@ -17,7 +17,7 @@ export class RetailStoryPage {
      * @returns {Promise<boolean>}
      */
     public async clickSocialShareDropdown() : Promise<boolean> {    
-        await this.page.click(this.socialShareDropdown, {force: true});
+        await this.page.click(this.socialShareDropdown, { force: true, delay: 3000 });
         const socialDropdownExpanded = await this.page.isVisible(this.socialShareDropdownExpanded);
 
         return socialDropdownExpanded;

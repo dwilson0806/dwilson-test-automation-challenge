@@ -4,9 +4,11 @@ export class CookieFormComponent {
 
     private cookieIframe = "#sp_message_iframe_364840";
     private page : Page;
+    private cookiesEnabled : boolean;
 
-    constructor(page: Page) {
+    constructor(page: Page, cookiesEnabled: boolean) {
         this.page = page;
+        this.cookiesEnabled = cookiesEnabled;
     }
 
     /**
@@ -14,7 +16,15 @@ export class CookieFormComponent {
      * @returns {Promise<void>}
      */
     public async acceptCookies() : Promise<void> {
-        const acceptCookiesButton = this.page.frameLocator(this.cookieIframe).getByText("I'm OK with that");
-        await acceptCookiesButton.click();
+
+        if(this.cookiesEnabled) {
+            const acceptCookiesButton = this.page.frameLocator(this.cookieIframe).getByText("I'm OK with that");
+            await acceptCookiesButton.click({delay: 1000});
+        }//if
+
+        //printing for visibility
+        else {
+            console.log("Accept cookie action will not be called");
+        }
     }
 }

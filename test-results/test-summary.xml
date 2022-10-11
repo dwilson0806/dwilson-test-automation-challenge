@@ -1,12 +1,16 @@
-<testsuites id="" name="" tests="4" failures="0" skipped="0" errors="0" time="26.015349999904632">
-<testsuite name="tests/retail/retail-story.spec.ts" timestamp="1665414810307" hostname="" tests="4" failures="0" skipped="0" time="25.092" errors="0">
-<testcase name="retail story/article tests @retailstory Verify share dropdown contains correct items" classname="[businessinsider-prod-e2e] › tests/retail/retail-story.spec.ts › retail story/article tests @retailstory › Verify share dropdown contains correct items" time="2.406">
+<testsuites id="" name="" tests="5" failures="0" skipped="0" errors="0" time="29.783886000156404">
+<testsuite name="tests/latest/latest-story.spec.ts" timestamp="1665486231000" hostname="" tests="1" failures="0" skipped="0" time="4.272" errors="0">
+<testcase name="latest page tests @latest Verify latest feed stories return 200 OK" classname="[businessinsider-prod-e2e] › tests/latest/latest-story.spec.ts › latest page tests @latest › Verify latest feed stories return 200 OK" time="4.272">
 </testcase>
-<testcase name="retail story/article tests @retailstory Verify clicking Twitter in share dropdown successfully redirects to Twitter" classname="[businessinsider-prod-e2e] › tests/retail/retail-story.spec.ts › retail story/article tests @retailstory › Verify clicking Twitter in share dropdown successfully redirects to Twitter" time="13.097">
+</testsuite>
+<testsuite name="tests/retail/retail-story.spec.ts" timestamp="1665486231000" hostname="" tests="4" failures="0" skipped="0" time="29.097" errors="0">
+<testcase name="retail story/article tests @retail Verify share dropdown contains correct items" classname="[businessinsider-prod-e2e] › tests/retail/retail-story.spec.ts › retail story/article tests @retail › Verify share dropdown contains correct items" time="4.718">
 </testcase>
-<testcase name="retail story/article tests @retailstory Verify clicking LinkedIn in share dropdown successfully redirects to LinkedIn" classname="[businessinsider-prod-e2e] › tests/retail/retail-story.spec.ts › retail story/article tests @retailstory › Verify clicking LinkedIn in share dropdown successfully redirects to LinkedIn" time="4.138">
+<testcase name="retail story/article tests @retail Verify clicking Twitter in share dropdown successfully redirects to Twitter" classname="[businessinsider-prod-e2e] › tests/retail/retail-story.spec.ts › retail story/article tests @retail › Verify clicking Twitter in share dropdown successfully redirects to Twitter" time="9.569">
 </testcase>
-<testcase name="retail story/article tests @retailstory Verify clicking Flipboard in share dropdown successfully redirects to Flipboard" classname="[businessinsider-prod-e2e] › tests/retail/retail-story.spec.ts › retail story/article tests @retailstory › Verify clicking Flipboard in share dropdown successfully redirects to Flipboard" time="5.451">
+<testcase name="retail story/article tests @retail Verify clicking LinkedIn in share dropdown successfully redirects to LinkedIn" classname="[businessinsider-prod-e2e] › tests/retail/retail-story.spec.ts › retail story/article tests @retail › Verify clicking LinkedIn in share dropdown successfully redirects to LinkedIn" time="5.751">
+</testcase>
+<testcase name="retail story/article tests @retail Verify clicking Flipboard in share dropdown successfully redirects to Flipboard" classname="[businessinsider-prod-e2e] › tests/retail/retail-story.spec.ts › retail story/article tests @retail › Verify clicking Flipboard in share dropdown successfully redirects to Flipboard" time="9.059">
 </testcase>
 </testsuite>
 </testsuites>
